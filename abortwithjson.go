@@ -80,12 +80,7 @@ func findAbortWithStatusJSON(pass *analysis.Pass) {
 			Pos:      selectorExpr.Pos(),
 			Category: "abortwithjson",
 			Message:  fmt.Sprintf("use of deprecated function %s. Use %s instead", ginCtx+"."+selectorExpr.Sel.Name, "apierror.AbortWithError"),
-			SuggestedFixes: []analysis.SuggestedFix{
-				analysis.SuggestedFix{
-					Message: "change gin method to apierror library",
-				},
-			},
 		})
-		//pass.Reportf(selectorExpr.Pos(), "use of deprecated function %s. Use %s instead", ginCtx+"."+selectorExpr.Sel.Name, "apierror.AbortWithError")
+		pass.Reportf(selectorExpr.Pos(), "use of deprecated function %s. Use %s instead", ginCtx+"."+selectorExpr.Sel.Name, "apierror.AbortWithError")
 	})
 }
