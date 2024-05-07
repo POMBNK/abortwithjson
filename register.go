@@ -6,7 +6,7 @@ import (
 )
 
 func init() {
-	register.Plugin("example", New)
+	register.Plugin("abortwithjson", New)
 }
 
 type MySettings struct {
