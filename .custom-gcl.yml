@@ -1,0 +1,5 @@
+version: v1.57.0
+plugins:
+  # a plugin from a Go proxy
+  - module: 'github.com/golangci/example-plugin-module-linter'
+    version: v0.1.0
