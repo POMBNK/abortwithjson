@@ -4,6 +4,7 @@ go 1.21.3
 
 require (
 	github.com/gin-gonic/gin v1.10.0
+	github.com/golangci/plugin-module-register v0.1.1
 	golang.org/x/tools v0.21.0
 )
 
